@@ -8,7 +8,7 @@
 * [map과 abbreviate](map.md)
 * [여러 파일을 편집하기](multiple_files.md)
 * [.vimrc 설정 방법](vimrc.md)
-    * 플러그인 관리자 사용 방법
+    * [플러그인 관리자 사용 방법](plugin_man.md)
     * 플러그인 소개
 
 * IDE 처럼 사용하기
