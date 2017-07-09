@@ -47,5 +47,14 @@ $ ctags -R --exclude=.git --exclude=log *
 
 > 참고 : 프로젝트 루트에서 VIM을 실행했기 때문에 편집할 파일을 찾기 어렵다면 fzf.vim 이나 CtrlP.vim 으로 파일을 찾아 편집하면 됩니다.
 
+## tags 자동 갱신 플러그인의 사용
+
+* Vim에서 tags를 사용할 때 가장 짜증나는 점은 수동으로 일일이 tags 파일을 갱신해줘야 한다는 것입니다.
+* 게다가 바뀐 파일 정보만 갱신하면 될 텐데 멍청한 `-R` 옵션은 매번 전체 파일을 갱신합니다.
+* 따라서 Vim에서 tags를 제대로 편리하게 사용하려면 tags 파일을 자동으로 갱신해주는 도구를 설치할 필요가 있습니다.
+
+* [vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)를 사용하면 tags 파일을 자동으로 갱신할 수 있습니다.
+* vim-gutentags는 git status를 참고하여 변경된 파일의 tags 정보만 갱신하기 때문에 빠르며, 백그라운드에서 갱신 작업이 돌아가기 때문에 편리합니다.
+
 ## 참고 자료
 * https://gist.github.com/nazgob/1570678
