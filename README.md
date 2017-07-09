@@ -10,6 +10,7 @@
 * [.vimrc 설정 방법](md/vimrc.md)
     * [플러그인 관리자 사용 방법](md/plugin_man.md)
     * 플러그인 소개
+    * 플러그인 작성하는 방법
 
 * IDE 처럼 사용하기
     * [VIM buffer를 IDE 탭처럼 사용하기](md/buffertip.md)
