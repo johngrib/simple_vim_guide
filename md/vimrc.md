@@ -110,8 +110,20 @@ set noacd       " off 로 설정(축약형)
 #### `autowrite`, `aw`
 
 * boolean 옵션. 기본값은 `off`. 도움말은 `:help autowrite`.
-* 변경 사항이 있을 때마다 자동으로 파일을 저장합니다.
+* 변경 사항이 있는 상태에서 특정 명령을 실행할 때마다 자동으로 파일을 저장합니다.
 * 사용할 생각이 있다면, 비슷하게 작동하지만 조건이 다른 `autowriteall`과도 비교해 볼 필요가 있습니다.
+
+특정 명령의 목록은 다음과 같습니다. 주로 다른 파일로 이동하는 종류의 명령입니다.
+
+* `:previous`, `:next`
+* `:rewind`
+* `:first`, `:last`
+* `:stop`
+* `suspend`
+* `:tag`
+* `:!`
+* `:make`
+* `CTRL-]`, `CTRL-^`
 
 #### `background`, `bg`
 * string 옵션. `dark`, `light` 둘 중 하나의 값만 설정 가능. 도움말은 `:help 'bg'`
