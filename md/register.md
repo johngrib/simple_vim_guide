@@ -58,6 +58,7 @@
 `"%`        | read-only           | 현재 편집중인 파일의 이름이 입력되어 있는 레지스터.
 `"/`        | last search pattern | 가장 최근의 검색어가 입력되는 레지스터.
 `"=`        | expression register | 가장 최근에 사용한 expression 이 입력되는 레지스터.
+`"_`        | black hole          | **블랙홀 레지스터!** `/dev/null` 같은 역할을 합니다.
 
 ### register 사용 예제 (기초)
 * NORMAL 모드
