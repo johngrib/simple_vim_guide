@@ -7,6 +7,7 @@
 * [abbreviate 사용법](#abbreviate-사용법)
     * [abbreviate 사용 예제](#abbreviate-사용-예제)
     * [필요한 경우 abbreviate에서도 nore를 고려합시다](#필요한-경우-abbreviate에서도-nore를-고려합시다)
+    * [normal 모드의 활용](#normal-모드의-활용)
 * [참고 자료](#참고-자료)
 
 ## map 사용법
@@ -134,6 +135,20 @@ read the fine manual read the fine manual rtfm
 :norea rtfm read the fine manual rtfm
 ```
 위와 같이 설정한 다음 INSERT 모드에서 `rtfm`을 입력해 보면 `read the fine manual rtfm`으로 자동완성됩니다.
+
+### normal 모드의 활용
+
+`<Esc>`를 사용하면 NORMAL 모드로 들어갈 수 있습니다.
+
+```viml
+:abbr _cmt /* */<Esc>hhi
+```
+
+위와 같이 등록한 다음, `_cmt`를 입력하면 `/* */`가 자동으로 완성되고, 커서가 가운데의 스페이스 부분으로 이동해 있게 됩니다.
+
+(`_cmt` 앞에 `_`를 붙인 이유는 `cmt`만 써도 멋대로 자동 완성이 되어서 골치가 아프기 때문입니다.)
+
+이 기능을 활용하면 `import`, `if`, `for` 문처럼 괄호가 많고 줄바꿈이 있는 형태의 템플릿을 만들어 두고 사용할 수 있습니다.
 
 ## 참고 자료
 * http://vim.wikia.com/wiki/Using_abbreviations
