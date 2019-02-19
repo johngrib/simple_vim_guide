@@ -21,6 +21,7 @@
 > `M-c`를 입력하고 싶다면 `<ESC>`를 누르고, `c`를 누릅니다.
 
 * `option`키 조합이 특수문자 입력인 mac 터미널에서는 `<ESC>`를 사용하면 됩니다.
+    * 또는 터미널 설정에 들어가 `Settings - Keyboard - Use option as meta key`를 체크해줍니다.
 * iTerm2 에서 `META`키를 사용하고 싶다면 `Preferences > Profiles > Keys`에서 `option`키를 `+Esc`로 매핑해줍니다.
 > 하지만 이렇게 하면 VIM에서 `option`키를 사용하기 난감해집니다. MacVIM에서 `macmeta`를 쓰거나 다른 방식으로 `option`키를 쓰고 있다면 `+Esc` 설정이 더 불편할 수 있기 때문에, 차라리 `$ set -o vi` 사용이 낫다고 봅니다.
 
