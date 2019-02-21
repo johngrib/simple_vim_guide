@@ -8,6 +8,7 @@
     * [abbreviate 사용 예제](#abbreviate-사용-예제)
     * [필요한 경우 abbreviate에서도 nore를 고려합시다](#필요한-경우-abbreviate에서도-nore를-고려합시다)
     * [normal 모드의 활용](#normal-모드의-활용)
+    * [expr로 vimscript 실행하기](#expr로-vimscript-실행하기)
 * [참고 자료](#참고-자료)
 
 ## map 사용법
