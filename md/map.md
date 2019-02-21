@@ -150,5 +150,32 @@ read the fine manual read the fine manual rtfm
 
 이 기능을 활용하면 `import`, `if`, `for` 문처럼 괄호가 많고 줄바꿈이 있는 형태의 템플릿을 만들어 두고 사용할 수 있습니다.
 
+### expr로 vimscript 실행하기
+
+`<expr>`을 사용하면 vimscript 실행 결과로 완성해 줍니다.
+
+다음은 제가 사용하고 있는 abbr 입니다.
+
+```viml
+iabbr __email abcd@efgh.com
+iabbr <expr> __time strftime("%Y-%m-%d %H:%M:%S")
+iabbr <expr> __file expand('%:p')
+iabbr <expr> __name expand('%')
+iabbr <expr> __pwd expand('%:p:h')
+iabbr <expr> __branch system("git rev-parse --abbrev-ref HEAD")
+```
+
+* `__time`
+    * vim 내장 함수인 strftime을 실행하여 나온 결과(현재 시간)로 완성해 줍니다.
+    * 예: `__time`을 입력하면 `2018-11-23 09:25:07`와 같이 나옵니다.
+* `__file`
+    * vim 내장 함수인 `expand`를 실행하여 나온 결과(현재 편집중인 파일의 전체 경로)로 완성해 줍니다.
+* `__branch`
+    * 현재 git branch를 완성해 준다.
+* 그 외 생략
+
+특히 마지막의 `system` 함수를 사용하면 셸 명령어를 실행한 결과를 가져올 수 있어 편리합니다.
+
 ## 참고 자료
 * http://vim.wikia.com/wiki/Using_abbreviations
+* [vim 자동완성 기능 사용하기](https://johngrib.github.io/wiki/vim-auto-completion/ )
