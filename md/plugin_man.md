@@ -13,8 +13,8 @@ VIM은 VIM 스크립트만 작성할 수 있다면 누구나 플러그인을 만
 
 > Vi는 Bill Joy가 개발하여 1976년에 릴리즈, Vim은 Bram Moolenaar가 개발하여 1991년에 릴리즈하였습니다.
 
-[VIM 공식 홈페이지](http://www.vim.org/)에는 [5338개의 플러그인](http://www.vim.org/scripts/script_search_results.php)이 등록되어 있으며,
-VIM 플러그인 사이트인 [VimAwesome](http://vimawesome.com/)에서는 14400개의 플러그인을 소개하고 있습니다.
+[VIM 공식 홈페이지](http://www.vim.org/)에는 [5천개 이상의 플러그인](http://www.vim.org/scripts/script_search_results.php)이 등록되어 있으며,
+VIM 플러그인 사이트인 [VimAwesome](http://vimawesome.com/)에서는 1만 7천개 이상의 플러그인을 소개하고 있습니다.
 어지간한 기능은 찾아보면 누가 이미 만들어 놓은 플러그인이 있으므로 가져다 꽂아 쓰면 됩니다.
 만약 원하는 기능을 가진 플러그인이 없다면 직접 개발하면 됩니다.
 
