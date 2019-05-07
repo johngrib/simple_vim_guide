@@ -68,6 +68,61 @@ set langmap=ㅁa,ㅠb,ㅊc,ㅇd,ㄷe,ㄹf,ㅎg,ㅗh,ㅑi,ㅓj,ㅏk,ㅣl,ㅡm,ㅜ
 * 치명적인 문제 : OSX에서는 잘 돌아가지만, OSX의 다음 버전인 macOS에서는 입력 관련 변경 사항이 있어서 Karabiner가 제대로 동작하지 않습니다.
 macOS를 위한 Karabiner-Elements가 현재 개발중이긴 한데, 아직까지는 단순 키 맵핑만 가능해서 원하는 기능을 위해 사용하기에는 부족한 점이 많습니다.
 
+업데이트된 Karabiner-Elements에서 위 룰을 Complex Modifications를 사용하여 json 파일로 추가가 가능합니다.
+`~/.config/karabiner/assets/complex_modifications/` 에 새로운 json 파일을 추가하고 (ex. `escape_to_en.json`) 다음 내용을 추가해줍니다.
+
+```
+{
+  "title": "Convert to en when ESC",
+  "rules": [
+    {
+      "description":"Convert to en when ESC",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "escape",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "escape"
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "select_input_source": {
+                "language": "en"
+              }
+            }
+          ],
+          "conditions": [ 
+            { 
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^com\\.googlecode\\.iterm2$",
+                "^co\\.zeit\\.hyperterm$",
+                "^co\\.zeit\\.hyper$",
+                "^io\\.alacritty$",
+                "^net\\.kovidgoyal\\.kitty$" 
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+이후 Karabiner-Elements 환결설정 -> Complex Modifications -> Add rule 에서 해당 rule을 Enable 해줍니다.
+이후 conditions에 추가된 터미널 앱들 안에서 `<Esc>`를 입력할 때마다 영문으로 전환됩니다.
+
 ## 방법 : AutoHotkey
 Windows 라면 AutoHotkey 를 쓰는 방법이 있습니다. 다음과 같은 코드를 Ahk로 실행하면 `<Esc>`를 입력할 때마다 영문으로 전환됩니다.
 * 아래의 IME_CHECK 코드 출처는 다음과 같습니다.
