@@ -79,5 +79,5 @@
 `:nmap <C-j> i<CR><ESC>` | `NORMAL`모드에서 `<NL>`, 즉 `<C-j>`를 입력하면 현재 커서 오른쪽의 모든 문자열을 다음 라인으로 내려준다.
 `:nmap <NL> i<CR><ESC>` | `<C-j>`와 `<NL>`이 같으므로 위와 똑같다.
 `:imap email johngrib82@gmail.com<Esc>` | `INSERT`모드에서 `email`을 타이핑하면 `johngrib82@gmail.com`을 입력하고 `<Esc>`를 입력하여 `NORMAL`모드로 돌아간다.
-`:imap email johngrib82@gmail.com<C-]>` | 위와 똑같다.
+`:imap email johngrib82@gmail.com<C-[>` | 위와 똑같다.
 
