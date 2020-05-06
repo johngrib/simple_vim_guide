@@ -41,7 +41,7 @@ set langmap=ㅁa,ㅠb,ㅊc,ㅇd,ㄷe,ㄹf,ㅎg,ㅗh,ㅑi,ㅓj,ㅏk,ㅣl,ㅡm,ㅜ
 ## 방법 : input-source-switcher 설치
 [input-source-switcher](https://github.com/vovkasm/input-source-switcher)를 설치해서 쓰는 방법이 있습니다.
 
-* 자세한 내용은 [이상욱님의 블로그](http://yisangwook.tumblr.com/post/106780445189/vim-insert-mode-keyboard-switch)를 참고하시면 됩니다.
+* 자세한 내용은 [이상욱님의 블로그](https://sangwook.github.io/2015/01/01/vim-insert-mode-keyboard-switch.html)를 참고하시면 됩니다.
 
 ## 방법 : Karabiner
 맥이라면 [Karabiner](https://pqrs.org/osx/karabiner/) 의 프리셋을 사용할 수도 있고, Karabiner의 설정 파일인 `private.xml`에서 다음과 같이 설정해 주는 방법도 있습니다.
