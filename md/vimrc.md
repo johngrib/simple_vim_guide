@@ -664,7 +664,7 @@ set wc=<Tab>    " command-line 자동 완성 키를 <Esc>로 변경. (이렇게 
 set wildignore=*.o,*.bak
 ```
 
-#### `whildignorecase`, `wic`
+#### `wildignorecase`, `wic`
 * boolean 옵션. 파일명이나 디렉토리명을 자동완성할 때 대소문자를 무시합니다. 기본값은 `off`.
 * 추천값은 `on`.
 
