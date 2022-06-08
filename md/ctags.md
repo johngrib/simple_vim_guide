@@ -58,3 +58,4 @@ $ ctags -R --exclude=.git --exclude=log *
 
 ## 참고 자료
 * https://gist.github.com/nazgob/1570678
+* https://johngrib.github.io/wiki/ctags/
