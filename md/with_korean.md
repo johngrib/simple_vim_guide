@@ -97,10 +97,10 @@ macOS를 위한 Karabiner-Elements가 현재 개발중이긴 한데, 아직까�
             {
               "select_input_source": {
                 "language": "en"
-              },
-              {
-                "key_code": "escape"
               }
+            },
+            {
+              "key_code": "escape"
             }
           ],
           "conditions": [ 
