@@ -135,6 +135,7 @@ Windows 라면 AutoHotkey 를 쓰는 방법이 있습니다. 다음과 같은 �
 $Esc::
     if(IME_CHECK("A"))
         Send, {VK15}    ;영문이라면 한영전환 키를 입력해준다.
+    Send, {Escape}
     return
 
 /*
