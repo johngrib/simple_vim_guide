@@ -130,7 +130,7 @@ macOS를 위한 Karabiner-Elements가 현재 개발중이긴 한데, 아직까�
 Windows 라면 AutoHotkey 를 쓰는 방법이 있습니다. 다음과 같은 코드를 Ahk로 실행하면 `<Esc>`를 입력할 때마다 영문으로 전환됩니다.
 * 아래의 IME_CHECK 코드 출처는 다음과 같습니다.
 * http://autohotkey.co.kr/b/1-357
-
+* 특정 프로그램(VSCode)에서만 실행을 원할 경우, IfWinActive 기능을 사용합니다.
 ```autohotkey
 $Esc::
     if(IME_CHECK("A"))
