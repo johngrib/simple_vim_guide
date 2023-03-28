@@ -131,6 +131,7 @@ Windows 라면 AutoHotkey 를 쓰는 방법이 있습니다. 다음과 같은 �
 * 아래의 IME_CHECK 코드 출처는 다음과 같습니다.
 * http://autohotkey.co.kr/b/1-357
 * 특정 프로그램(ex: VSCode)에서만 실행을 원할 경우, IfWinActive 기능을 사용합니다.
+* Windows 11에선 Legacy IME를 사용하는 경우에만 작동합니다.
 ```autohotkey
 $Esc::
     if(IME_CHECK("A"))
@@ -157,6 +158,38 @@ ImmGetDefaultIMEWnd(hWnd) {
   return DllCall("imm32\ImmGetDefaultIMEWnd", Uint,hWnd, Uint)
 }
 ```
+
+* Windows 11에서 업데이트 된 IME를 사용하는 경우라면 아래 스크립트를 사용합니다.
+* 참조한 출처는 다음과 같습니다.
+* https://stackoverflow.com/questions/64280975/immgetcontext-returns-zero-always
+```autohotkey
+$Esc::
+    if(IME_CHECK("A"))
+        Send, {VK15}    ;영문이라면 한영전환 키를 입력해준다.
+    Send, {Escape}
+    return
+
+/*
+  IME check 
+*/
+IME_CHECK(WinTitle) {
+  WinGet,hWnd,ID,%WinTitle%
+; IMC_GETOPENSTATUS(0x5) 대신 IMC_GETCONVERSIONMODE(0x1)를 사용
+  Return Send_ImeControl(ImmGetDefaultIMEWnd(hWnd),0x001,"") 
+}
+Send_ImeControl(DefaultIMEWnd, wParam, lParam) {
+  DetectSave := A_DetectHiddenWindows
+  DetectHiddenWindows,ON
+   SendMessage 0x283, wParam,lParam,,ahk_id %DefaultIMEWnd%
+  if (DetectSave <> A_DetectHiddenWindows)
+      DetectHiddenWindows,%DetectSave%
+  return ErrorLevel
+}
+ImmGetDefaultIMEWnd(hWnd) {
+  return DllCall("imm32\ImmGetDefaultIMEWnd", Uint,hWnd, Uint)
+}
+```
+
 
 ## 방법 : 최후의 수단
 한글을 아예 사용하지 않고 영문으로만 컴퓨터를 사용하는 방법이 있습니다.
