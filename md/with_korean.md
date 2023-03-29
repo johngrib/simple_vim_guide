@@ -159,9 +159,8 @@ ImmGetDefaultIMEWnd(hWnd) {
 }
 ```
 
-* Windows 11에서 업데이트 된 IME를 사용하는 경우라면 아래 스크립트를 사용합니다.
-* 참조한 출처는 다음과 같습니다.
-* https://stackoverflow.com/questions/64280975/immgetcontext-returns-zero-always
+* Windows 11에서 업데이트 된 IME를 사용하는 경우라면 아래 스크립트를 사용합니다. [참고한 출처](https://stackoverflow.com/questions/64280975/immgetcontext-returns-zero-always)
+
 ```autohotkey
 $Esc::
     if(IME_CHECK("A"))
